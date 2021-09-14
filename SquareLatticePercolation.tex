@@ -137,7 +137,7 @@ Where
 \end{split}
 \end{align}
 
-This is demonstrated in figure (\ref{fig:relative-index-2}, \ref{fig:relative-index-3}) where $i$ is the green cluster and $j$ is the blue cluster. 
+If $\Delta x_c=L-1$, $\Delta x_c has to be updated to $\Delta x_c=-1$. If $\Delta x_c=-L+1$, $\Delta x_c has to be updated to $\Delta x_c=1$, where L is the linear size of the lattice. Same rule is applied for $\Delta y_c$.  This is demonstrated in figure (\ref{fig:relative-index-2}, \ref{fig:relative-index-3}) where $i$ is the green cluster and $j$ is the blue cluster. 
 
 	\begin{figure}
 	\centering
@@ -158,7 +158,7 @@ This is demonstrated in figure (\ref{fig:relative-index-2}, \ref{fig:relative-in
 \subsection{Detect Wrapping using relative index}
 Wrapping detection is done using relative index. In fact this is the only reason behind using relative index.
 
- At some state lattice can reach a state like (\ref{relative-index-9}) where just one site at index $(2,5)$ can trigger wrapping. We mark it by red color (\ref{relative-index-10}) which is relabeled by site at index $(3,5)$ with relative index $(1,-4)$. The red site becomes green by relative index transformation and acquires new relative index $(1,-5)$. Note that Index of any site is unchanged only relative index changes. Now we compare neighbor sites of new site indexed $(2,5)$. One is showed in figure (\ref{relative-index-11}), we can easily see that the absolute value of difference between $y$ value of the relative index is greater than $1$ which indicates that the cluster wrapped around the lattice once vertically. If absolute value of difference between $x$ values were greater than $1$ then we would say it is a horizontal wrapping.
+ At some state lattice can reach a state like (\ref{relative-index-9}) where just one site at index $(2,5)$ can trigger wrapping. We mark it by red color (\ref{relative-index-10}) which is relabeled by site at index $(3,5)$ with relative index $(1,-4)$. The red site becomes green by relative index transformation and acquires new relative index $(0,-4)$. Note that Index of any site is unchanged only relative index changes. Now we compare neighbor sites of new site indexed $(2,5)$. One is showed in figure (\ref{relative-index-11}), we can easily see that the absolute value of difference between $y$ value of the relative index is greater than $1$ which indicates that the cluster wrapped around the lattice once vertically. If absolute value of difference between $x$ values were greater than $1$ then we would say it is a horizontal wrapping.
 \begin{figure}
 	\centering
 	\subfloat[\label{relative-index-9}]{\includegraphics[width=0.34\linewidth]{fig/relative-index/relative-index-9.png}}
